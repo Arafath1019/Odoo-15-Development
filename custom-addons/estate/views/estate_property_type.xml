@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <!--    TREE VIEW OF ESTATE PROPERTY TYPE    -->
+    <record model="ir.ui.view" id="estate_property_type_tree">
+        <field name="name">Estate Property Type</field>
+        <field name="model">estate.property.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="sequence" />
+            </tree>
+        </field>
+    </record>
+</odoo>
