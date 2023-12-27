@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.actions.act_window" id="parent_action_window_employee_project_history">
+        <field name="name">Project History</field>
+        <field name="res_model">employee.project.history</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem action="parent_action_window_employee_project_history" id="menu_employee_project_history_form"/>
+</odoo>
