@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-employee_certification_user,employee_certification_user,model_employee_certification,base.group_user,1,1,1,1
-employee_certificate_user,employee_certification_user,model_employee_certificate,base.group_user,1,1,1,1
-certificate_issued_by_user,employee_certification_user,model_certificate_issued_by,base.group_user,1,1,1,1
