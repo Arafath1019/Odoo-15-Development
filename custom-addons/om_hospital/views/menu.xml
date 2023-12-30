@@ -2,11 +2,9 @@
 <odoo>
     <menuitem id="menu_hospital_root"
         name="Hospital"
-        web_icon="om_hospital,static/description/icon.png"
-        sequence="0" />
+        web_icon="om_hospital,static/description/icon.png" />
 
     <menuitem id="menu_patient_master"
         name="Patient Details"
-        parent="menu_hospital_root"
-        sequence="0" />
+        parent="menu_hospital_root" />
 </odoo>
