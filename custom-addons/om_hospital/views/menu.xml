@@ -7,4 +7,8 @@
     <menuitem id="menu_patient_master"
         name="Patient Details"
         parent="menu_hospital_root" />
+
+    <menuitem id="menu_appointment_master"
+        name="Appointments"
+        parent="menu_hospital_root" />
 </odoo>
