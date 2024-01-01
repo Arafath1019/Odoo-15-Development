@@ -32,7 +32,7 @@
 
                     <notebook>
                         <page string="Prescription" name="prescription">
-
+                            <field name="prescription" />
                         </page>
                         <page string="Pharmacy" name="pharmacy">
 
