@@ -14,6 +14,7 @@ class HospitalAppointment(models.Model):
     ref = fields.Char(string="Reference")
     prescription = fields.Html(string="Prescription", placeholder="Enter your prescription")
     priority = fields.Selection([('0', 'Normal'), ('1', 'Low'), ('2', 'Hight'), ('3', 'Very Hight')], string="Priority")
+    state = fields.Selection([('draft', 'Draft'), ('in_consultation', 'In Consultation'), ('done', 'Done'), ('cancel', 'Cancel')], string="Status", default="draft")
     
     @api.onchange('patient_id')
     def onchange_patient_id(self):
