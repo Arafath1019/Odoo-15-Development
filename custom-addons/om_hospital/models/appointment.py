@@ -13,6 +13,7 @@ class HospitalAppointment(models.Model):
     gender = fields.Selection(related="patient_id.gender")
     ref = fields.Char(string="Reference")
     prescription = fields.Html(string="Prescription", placeholder="Enter your prescription")
+    priority = fields.Selection([('0', 'Normal'), ('1', 'Low'), ('2', 'Hight'), ('3', 'Very Hight')], string="Priority")
     
     @api.onchange('patient_id')
     def onchange_patient_id(self):
