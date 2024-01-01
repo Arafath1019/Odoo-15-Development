@@ -1,4 +1,5 @@
 from odoo import api, models, fields
+from datetime import date
 
 class HospitalPatient(models.Model):
     _name = "hospital.patient"
@@ -7,6 +8,16 @@ class HospitalPatient(models.Model):
     
     name = fields.Char(string="Name", tracking=True)
     ref = fields.Char(string="Reference", default="Odoo 15 Development")
-    age = fields.Integer(string="Age", tracking=True)
+    date_of_birth = fields.Date(string="Date of birth")
+    age = fields.Integer(string="Age", compute="_compute_age", tracking=True)
     gender = fields.Selection([("male", "Male"), ("female", "Female")], string="Gender", tracking=True, default="female")
     active = fields.Boolean(string="Active", default=True)
+    
+    @api.depends('date_of_birth')
+    def _compute_age(self):
+        for rec in self:
+            today = date.today()
+            if rec.date_of_birth:
+                rec.age = today.year - rec.date_of_birth.year
+            else:
+                rec.age = 0
