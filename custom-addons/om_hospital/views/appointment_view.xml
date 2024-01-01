@@ -29,6 +29,15 @@
                             <field name="appointment_time" />
                         </group>
                     </group>
+
+                    <notebook>
+                        <page string="Prescription" name="prescription">
+
+                        </page>
+                        <page string="Pharmacy" name="pharmacy">
+
+                        </page>
+                    </notebook>
                 </sheet>
                 <!-- Chatter -->
                 <div class="oe_chatter">
