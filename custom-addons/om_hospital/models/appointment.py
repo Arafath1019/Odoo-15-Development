@@ -11,7 +11,7 @@ class HospitalAppointment(models.Model):
     booking_date = fields.Date(string="Booking Date", default=fields.Date.context_today)
     # gender = fields.Selection(related="patient_id.gender", readonly=False)
     gender = fields.Selection(related="patient_id.gender")
-    ref = fields.Char(string="Reference")
+    ref = fields.Char(string="Reference", help="Reference from patient record")
     prescription = fields.Html(string="Prescription", placeholder="Enter your prescription")
     priority = fields.Selection([('0', 'Normal'), ('1', 'Low'), ('2', 'Hight'), ('3', 'Very Hight')], string="Priority")
     state = fields.Selection([('draft', 'Draft'), ('in_consultation', 'In Consultation'), ('done', 'Done'), ('cancel', 'Cancel')], string="Status", default="draft")
