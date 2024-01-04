@@ -7,8 +7,10 @@
         <field name="arch" type="xml">
             <tree decoration-success="state == 'done'" decoration-info="state == 'draft'" decoration-danger="state == 'cancel'" decoration-warning="state == 'in_consultation'" >
                 <field name="patient_id" />
+                <field name="ref" optional="hide" />
+                <field name="gender" optional="hide" />
                 <field name="appointment_time" />
-                <field name="booking_date" />
+                <field name="booking_date" optional="show" />
                 <field name="activity_ids" widget="list_activity" />
                 <!-- decoration-success -> green -->
                 <!-- decoration-danger -> red -->
