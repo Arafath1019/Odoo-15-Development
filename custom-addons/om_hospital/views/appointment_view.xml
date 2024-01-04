@@ -9,6 +9,7 @@
                 <field name="patient_id" />
                 <field name="appointment_time" />
                 <field name="booking_date" />
+                <field name="activity_ids" widget="list_activity" />
                 <!-- decoration-success -> green -->
                 <!-- decoration-danger -> red -->
                 <!-- decoration-warning -> orange -->
