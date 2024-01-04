@@ -9,6 +9,12 @@
                 <field name="patient_id" />
                 <field name="appointment_time" />
                 <field name="booking_date" />
+                <!-- decoration-success -> green -->
+                <!-- decoration-danger -> red -->
+                <!-- decoration-warning -> orange -->
+                <!-- decoration-info -> light blue -->
+                <!-- decoration-mute -->
+                <field name="state" widget="badge" decoration-success="state == 'done'" decoration-info="state == 'draft'" decoration-danger="state == 'cancel'" decoration-warning="state == 'in_consultation'" />
             </tree>
         </field>
     </record>
