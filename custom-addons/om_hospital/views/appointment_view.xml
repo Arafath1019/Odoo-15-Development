@@ -40,7 +40,7 @@
                         <group>
                             <field name="patient_id" />
                             <field name="ref" />
-                            <field name="gender" />
+                            <field name="gender" default_focus="1" />
                             <field name="doctor_id" widget="many2one_avatar_user" />
                             <field name="booking_date" help="Date of booking" />
                         </group>
