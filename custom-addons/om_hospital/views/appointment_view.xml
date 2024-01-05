@@ -5,7 +5,7 @@
         <field name="name">hospital.appointment.tree</field>
         <field name="model">hospital.appointment</field>
         <field name="arch" type="xml">
-            <tree decoration-success="state == 'done'" decoration-info="state == 'draft'" decoration-danger="state == 'cancel'" decoration-warning="state == 'in_consultation'" >
+            <tree decoration-success="state == 'done'" decoration-info="state == 'draft'" decoration-danger="state == 'cancel'" decoration-warning="state == 'in_consultation'" sample="1" >
                 <field name="patient_id" />
                 <field name="ref" optional="hide" />
                 <field name="doctor_id" widget="many2one_avatar_user" />
