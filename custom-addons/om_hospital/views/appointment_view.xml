@@ -50,6 +50,8 @@
                             <field name="booking_date" help="Date of booking" />
                         </group>
                         <group>
+                            <!-- For showing only in developer mode -->
+                            <!-- groups="base.group_no_one" -->
                             <field name="hide_sales_price" />
                             <field name="appointment_time" />
                             <button name="action_test" 
