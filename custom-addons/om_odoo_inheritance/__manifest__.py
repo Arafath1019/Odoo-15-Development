@@ -7,7 +7,9 @@
     'summary': 'Odoo Inheritance',
     'description': """Odoo Inheritance""",
     'depends': ['sale'],
-    'data': [],
+    'data': [
+        'views/sale_order_view.xml',    
+    ],
     'demo': [],
     'application': True,
     'installable': True,
