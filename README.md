@@ -18,3 +18,6 @@ OR <br />
 
 ### Generate Odoo configuration file from terminal
 Run the command from terminal `python_path odoo_bin_path --addons=all_addons_path -r odoo -w odoo --db_host=localhost --db_port=5432 -p 8069 --stop-after-init -s -c odoo_conf_new_path`
+
+### Install Module From Terminal
+Run the command from terminal `python_path odoo_bin_path -c odoo_conf_path -d db_name -i module_name`
