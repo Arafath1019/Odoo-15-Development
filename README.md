@@ -21,3 +21,7 @@ Run the command from terminal `python_path odoo_bin_path --addons=all_addons_pat
 
 ### Install Module From Terminal
 Run the command from terminal `python_path odoo_bin_path -c odoo_conf_path -d db_name -i module_name`
+
+### Error no 98 Address Already use Issue
+1. List of all running processes `ps aux||grep odoo`<br />
+2. Kill a process `sudo kill -9 process_id`
