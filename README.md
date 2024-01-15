@@ -12,3 +12,9 @@ For example: `./odoo-bin scaffold om_odoo_inheritance /home/dev/odoo/15.0/custom
 
 ### Run Odoo From Terminal
 Run the command from terminal `python_path odoo_bin_path -c odoo_conf_path`
+<br />
+OR <br />
+`python_path odoo_bin_path --addons=all_addons_path -r odoo -w odoo --db_host=localhost --db_port=5432 -p 8069`
+
+### Generate Odoo configuration file from terminal
+Run the command from terminal `python_path odoo_bin_path --addons=all_addons_path -r odoo -w odoo --db_host=localhost --db_port=5432 -p 8069 --stop-after-init -s -c odoo_conf_new_path`
