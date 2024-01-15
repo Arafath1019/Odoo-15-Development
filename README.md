@@ -25,3 +25,9 @@ Run the command from terminal `python_path odoo_bin_path -c odoo_conf_path -d db
 ### Error no 98 Address Already use Issue
 1. List of all running processes `ps aux||grep odoo`<br />
 2. Kill a process `sudo kill -9 process_id`
+
+### Update a module from odoo cli
+Run the command from CLI `python_path odoo_bin_path -c odoo_conf_path -d db_name -u module_name`
+
+### Create database from terminal
+Run the command from cli `python_path odoo_bin_path -c odoo_conf_path -d db_name`
