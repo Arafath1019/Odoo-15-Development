@@ -40,6 +40,7 @@
                 <!-- decoration-info -> light blue -->
                 <!-- decoration-mute -->
                 <field name="state" widget="badge" decoration-success="state == 'done'" decoration-info="state == 'draft'" decoration-danger="state == 'cancel'" decoration-warning="state == 'in_consultation'" />
+                <button name="action_done" class="fa fa-check btn-success" type="object" attrs="{'invisible': [('state', '!=', 'in_consultation')]}" />
             </tree>
         </field>
     </record>
