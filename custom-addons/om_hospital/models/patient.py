@@ -64,3 +64,7 @@ class HospitalPatient(models.Model):
             name = record.ref + ' ' + record.name
             patient_list.append((record.id, name))
         return patient_list
+    
+    def action_test(self):
+        print("Clicked")
+        return

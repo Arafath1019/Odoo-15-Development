@@ -89,6 +89,10 @@
                                     class="oe_highlight" 
                                     help="On clicking this button you will be redirected to patient records"
                                     confirm="Are you sure to open the patient action?" />
+                            <groupby name="patient_id">
+                                <button name="action_test" string="Click Me" type="object" class="oe_highlight"/>
+                                <button name="edit" string="Edit" type="edit" />
+                            </groupby>
                         </group>
                     </group>
 
