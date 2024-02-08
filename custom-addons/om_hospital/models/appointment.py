@@ -22,8 +22,9 @@ class HospitalAppointment(models.Model):
     hide_sales_price = fields.Boolean(string="Hide Sales Price")
     
     def unlink(self):
-        if self.state == 'done':
-            raise ValidationError(_("You cannot delete appointment with 'Done' status!"))
+        for rec in self:
+            if rec.state == 'done':
+                raise ValidationError(_("You cannot delete appointment with 'Done' status!"))
         return super(HospitalAppointment, self).unlink()
     
     @api.onchange('patient_id')
