@@ -11,7 +11,7 @@ class HospitalPatient(models.Model):
     name = fields.Char(string="Name", tracking=True)
     ref = fields.Char(string="Reference", default="Odoo 15 Development")
     date_of_birth = fields.Date(string="Date of birth")
-    age = fields.Integer(string="Age", compute="_compute_age", inverse="_inverse_compute_age", tracking=True)
+    age = fields.Integer(string="Age", compute="_compute_age", inverse="_inverse_compute_age", search="_search_age", tracking=True)
     gender = fields.Selection([("male", "Male"), ("female", "Female")], string="Gender", tracking=True, default="female")
     active = fields.Boolean(string="Active", default=True)
     appointment_id = fields.Many2one(comodel_name="hospital.appointment", string="Appointments")
@@ -64,6 +64,12 @@ class HospitalPatient(models.Model):
         today = date.today()
         for rec in self:
             rec.date_of_birth = today - relativedelta.relativedelta(years=rec.age)
+    
+    def _search_age(self, operator, value):
+        date_of_birth = date.today() - relativedelta.relativedelta(years=value)
+        start_of_year = date_of_birth.replace(day=1,month=1)
+        end_of_year = date_of_birth.replace(day=31,month=12)
+        return [('date_of_birth', '>=', start_of_year), ('date_of_birth', '<=', end_of_year)]
                 
     def name_get(self):
         patient_list = []
