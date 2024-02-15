@@ -74,7 +74,8 @@ class HospitalPatient(models.Model):
     def name_get(self):
         patient_list = []
         for record in self:
-            name = record.ref + ' ' + record.name
+            # name = record.ref + ' ' + record.name
+            name = f"{record.ref} {record.name}"
             patient_list.append((record.id, name))
         return patient_list
     
