@@ -5,6 +5,15 @@
 2. Run: `docker-compose up`
 3. Browse: http://localhost:8069
 
+### Demo Data 
+1. Master Password: admin1234
+2. Database Name: odoo15
+3. Email: odoo15@gmail.com 
+4. Password: odoo15
+5. Country: Bangladesh
+6. Demo Data: Click Checkbox
+7. Create Database and login
+
 ### Steps for Generating a Odoo module using Scaffold
 1. Navigate to Odoo source directory from terminal
 2. Run this command: `./odoo-bin scaffold custom_addon_name custom_addon_path` <br />
